@@ -1,0 +1,19 @@
+select * from Table_Emp
+
+--select * from tbl_name
+
+--insert into Table_Emp
+--select * from tbl_name where col2 != 'a'
+
+--insert into Table_Emp
+--select * from tbl_name where col2 = 'a'
+
+--insert into Table_Emp
+--values (6, 'f') , (7, 'g')
+
+--insert into Table_Emp ( Name, id)
+--values ('e',5)
+
+--insert into Table_Emp
+--values (4,'d')
+
