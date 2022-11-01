@@ -1,0 +1,38 @@
+--select * into tbl2 from tbl_name
+--select * from tbl2
+
+--select [BusinessEntityID]
+--      ,[PersonType]
+--      ,[NameStyle]
+--      ,[Title]
+--      ,[FirstName]
+--      ,[MiddleName]
+--      ,[LastName]
+--      ,[Suffix]
+--      ,[EmailPromotion] into tbl3 from [AdventureWorks2019].[Person].[Person]
+
+--select * from tbl3
+
+--select [BusinessEntityID]
+--      ,[PersonType]
+--      ,[NameStyle]
+--      ,[Title]
+--      ,[FirstName]
+--      ,[MiddleName]
+--      ,[LastName]
+--      ,[Suffix]
+--      ,[EmailPromotion] into tbl4 from [AdventureWorks2019].[Person].[Person] where Title is not null
+
+--select * from tbl4
+
+--select [BusinessEntityID]
+--      ,[PersonType]
+--      ,[NameStyle]
+--      ,[Title]
+--      ,[FirstName]
+--      ,[MiddleName]
+--      ,[LastName]
+--      ,[Suffix]
+--      ,[EmailPromotion] into tbl5 from [AdventureWorks2019].[Person].[Person] where 1=2
+
+select * from tbl5
