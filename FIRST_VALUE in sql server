@@ -1,0 +1,8 @@
+--FIRST_VALUE ( [scalar_expression ] )  OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
+
+SELECT * FROM HR;
+
+SELECT * , FIRST_VALUE(HireDate) over ( partition by department order by seq) as FValue 
+from Hr;
+SELECT * , FIRST_VALUE(HireDate) over ( partition by department order by department) as FValueD 
+from Hr;
