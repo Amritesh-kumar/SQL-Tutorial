@@ -1,0 +1,17 @@
+-- LAG (scalar_expression [ , offset ] [ , default ] ) OVER ( [ partition_by_clause ] order_by_clause )
+-- LEAD (scalar_expression [ , offset ] [ , default ] ) OVER ( [ partition_by_clause ] order_by_clause )
+
+--select * 
+--, LAG(HireDate) over(order by department) as LagValue
+--, Lead(HireDate) over(order by department) as LeadValue
+--from HR
+
+--select * 
+--, LAG(HireDate,2) over(order by department) as LagValue
+--, Lead(HireDate,2) over(order by department) as LeadValue
+--from HR
+
+select * 
+, LAG(HireDate,2,'1999-01-01') over(order by department) as LagValue
+, Lead(HireDate,2, '1999-12-12') over(order by department) as LeadValue
+from HR
