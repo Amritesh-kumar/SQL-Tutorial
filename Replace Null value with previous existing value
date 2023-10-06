@@ -1,0 +1,11 @@
+--select seq,Brand,Category,Subcategory from productdetails;
+
+
+with cte1 as (
+select seq,Brand,Category,Subcategory 
+,LEAD(seq) over (order by seq) as NextNotNullSeq
+from productdetails where Brand is not null
+)
+select c.Brand, p.Category,p.Subcategory
+from productdetails p join cte1 c 
+on p.seq >= c.seq and (p.seq <= c.NextNotNullSeq -1 or c.NextNotNullSeq is null)
