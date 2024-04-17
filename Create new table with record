@@ -1,0 +1,4 @@
+select * into productNew
+from Product;
+
+Select * from productNew;
