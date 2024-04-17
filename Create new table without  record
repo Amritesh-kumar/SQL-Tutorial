@@ -1,0 +1,4 @@
+select * into ProductWithoutRow from Product 
+where 1 = 0;
+
+select * from ProductWithoutRow;
