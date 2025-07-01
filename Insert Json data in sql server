@@ -1,0 +1,83 @@
+--CREATE TABLE STUDENTDETAILS(
+--	ID INT IDENTITY PRIMARY KEY,
+--	EDUCATION NVARCHAR(MAX)
+--);
+
+SELECT * FROM STUDENTDETAILS;
+
+
+SELECT 
+    JSON_VALUE(EDUCATION, '$.education."10th".schoolName') AS TenthSchool,
+    JSON_VALUE(education, '$.education."10th".marks') AS TenthMarks,
+	JSON_VALUE(education, '$.education.diploma.collegeName') AS diplomaSchool,
+    JSON_VALUE(education, '$.education."12th".marks') AS Marks,
+	JSON_VALUE(education, '$.education.btech.collegeName') AS TenthSchool,
+    JSON_VALUE(education, '$.education.btech.marks') AS TenthMarks
+
+FROM STUDENTDETAILS;
+--INSERT INTO STUDENTDETAILS(EDUCATION)
+--VALUES('
+--{
+--  "education": {
+--    "10th": {
+--      "schoolName": "Delhi Public School",
+--      "yearOfPassing": 2015,
+--      "marks": 89.6
+--    },
+--    "12th": {
+--      "schoolName": "Delhi Public School",
+--      "yearOfPassing": 2017,
+--      "marks": 91.2
+--    },
+--    "btech": {
+--      "collegeName": "Indian Institute of Technology Delhi",
+--      "yearOfPassing": 2021,
+--      "marks": 8.7,
+--      "marksType": "CGPA"
+--    }
+--  }
+--}
+--')
+
+--INSERT INTO STUDENTDETAILS(EDUCATION)
+--VALUES('
+--{
+--  "education": {
+--    "10th": {
+--      "schoolName": "Delhi Public School1",
+--      "yearOfPassing": 2015,
+--      "marks": 79.6
+--    },
+--    "12th": {
+--      "schoolName": "Delhi Public School1",
+--      "yearOfPassing": 2017,
+--      "marks": 94.2
+--    },
+--    "diploma": {
+--      "collegeName": "Indian Institute of Technology Delhi",
+--      "yearOfPassing": 2021,
+--      "marks": 8.7,
+--      "marksType": "CGPA"
+--    }
+--  }
+--}
+--')
+
+
+--INSERT INTO STUDENTDETAILS(EDUCATION)
+--VALUES('
+--{
+--  "education": {
+--    "10th": {
+--      "schoolName": "Delhi Public School1",
+--      "yearOfPassing": 2015,
+--      "marks": 79.6
+--    },
+--    "12th": {
+--      "schoolName": "Delhi Public School1",
+--      "yearOfPassing": 2017,
+--      "marks": 94.2
+--    }
+--  }
+--}
+--')
